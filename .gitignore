@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+db.sqlite3
+db.sqlite3-journal
+
+# Django media and static (optional)
+media/
+staticfiles/
+
+# dotenv
+.env
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Pytest
+.cache/
+
+# Pipenv, poetry, or venv
+venv/
+env/
+ENV/
+.venv/
+.idea/
+
+# MyPy
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.eggs/
+
+# Node modules (if you're using JS tools in your project)
+node_modules/
+
+# System files
+Thumbs.db
