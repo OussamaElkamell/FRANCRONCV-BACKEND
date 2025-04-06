@@ -1,3 +1,5 @@
+
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -10,6 +12,7 @@ const paymentRoutes = require('./routes/payment.routes');
 require('./services/firebase-admin');
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:8080' }));
@@ -37,7 +40,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Export the app to be used by Vercel
-module.exports = (req, res) => {
-  app(req, res);
-};
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
